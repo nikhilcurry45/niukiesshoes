@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap');
+
+* {
+  font-family: 'Comic Neue', cursive;
+  font-size: bolder;
+}
+
+.cards {
+  margin-left: 10px;
+  border-radius: 2px;
+  display: flex;
+  content-visibility: 2px;
+}
+
+@media (max-width:600px) {
+  .cards {
+    display: block;
+  }
+
+  #imagem img {
+    height: 500px;
+  }
+
+  .contacts {
+    position: absolute;
+  }
+}
+.sprit{
+  background-color: white;
+  color: black;
+}
+.cardhead {
+  font-size: 25px;
+  margin-left: 10px;
+  font-family: 'Comic Neue', cursive;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#nav img {
+  margin-left: 34px;
+}
+
+.container {
+  background-color: rgb(250, 227, 215);
+  color: rgb(238, 158, 18);
+  border-color: red;
+
+}
+
+
+
+.heading {
+  text-align: center;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.discription {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.linkbox {
+  background-color: orange;
+  border: solid black;
+  align-items: center;
+  width: fit-content;
+  padding: 50px 50px;
+  margin-left: 509px;
+  font-size: 20px;
+}
+
+@media (max-width:600px) {
+  .linkbox {
+    margin-left: 0px;
+  }
+}
+
+.linkbox a {
+  text-decoration: none;
+}
+
+.footer {
+  background-color: gray;
+}
+
+.heading {
+  color: white;
+  display: block;
+}
+
+/* For cards animated */
+
+.cart{
+  display: grid;
+  place-content: center;
+}
+
+.cards1 {
+  color: hsl(0, 0%, 100%);
+  background-size: cover;
+  padding: 10rem 0 0;
+  max-width: 35ch;
+  font-size: medium;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  transition: transform 500ms ease;
+}
+
+#first {
+  background-image: url(maxim-hopman-8cT5ja0P_N4-unsplash.jpg);
+}
+
+#fifth {
+  background-image: url(kier-in-sight-R0mbwH2wxj0-unsplash.jpg);
+}
+
+#second {
+  background-image: url(mojtaba-mosayebzadeh-CFYS5qMSuKo-unsplash.jpg);
+}
+
+#third {
+  background-image: url(11.jpeg);
+}
+
+#fourth {
+  background-image: url(12.jpeg);
+}
+
+.cards1:hover,
+.cards1:focus-within {
+  transform: scale(1.05);
+}
+
+.card-content {
+  --padding: 0.5rem;
+  padding: var(--padding);
+  background: linear-gradient(hs1(0 0% 0% / 0),
+      hs1(20 0% 0% / .3) 10%,
+      hs1(0 0% 0% / 1));
+}
+
+
+
+.cards1:focus-within .card-content>*:not(.card-title) {
+  transition-duration: 0ms;
+}
+
+.card-title {
+  position: relative;
+  width: max-content;
+
+}
+
+.card-title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  background: var(--clr-accent-400);
+  width: calc(100% + var(--padding));
+  bottom: -2px;
+  left: calc(var(--padding)* -1);
+  bottom: 0;
+
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+
+.cards1:hover .card-title::after,
+.cards1:focus-within .card-title::after {
+  transform: scaleX(1);
+}
+
+.card-body {
+  color: rgb(255, 255, 255 / 0.85)
+}
+
+@media (hover) {
+  .card-content {
+
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+    transition-delay: 500ms;
+  }
+
+  .cards1:hover .card-content,
+  .cards1:focus-within .card-content {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+
+  .cards1:focus-within .card-content {
+    transition-duration: 0ms;
+  }
+
+  .card-content>*:not(.card-title) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+  }
+
+  .cards1:hover .card-content>*:not(.card-title),
+  .cards1:focus-within .card-content>*:not(.card-title) {
+    opacity: 1;
+    transition-delay: 1000ms;
+  }
+
+  .card-title::after {
+    transform: scaleX(0);
+  }
+
+}
+
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: hsl(207, 19%, 9%);
+  background-color: hsl(142 90% 61%);
+  padding: 0.5em 1.25em;
+  border-radius: 0.25em;
+  
+}
+
+.button:hover,
+.button:focus {
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* 
+@media(prefers-reduced-motion: reduce){
+*,
+*::before,
+*::after {
+  animation-duration: 0.01ms
+  !important;
+  animation-iteration-count: 
+  !important;
+  transition-duration: 0.01ms
+  !important;
+  scroll-behavior: auto !important;
+
+}
+} */
+.allcards {
+  display: flex;
+}
+
+@media (max-width:600px) {
+  .allcards {
+    display: block;
+  }
+}
